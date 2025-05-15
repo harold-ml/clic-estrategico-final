@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Click Estratégico: Agencia de marketing digital y tradicional en Santa Cruz de la Sierra. Estrategias personalizadas en 7 días con ROI garantizado.">
+  <meta name="keywords" content="marketing digital, marketing tradicional, Santa Cruz Bolivia, estrategias de marketing, pymes, startups, ROI garantizado">
+  <meta name="author" content="Click Estratégico">
+  <meta name="robots" content="index, follow">
+  <title>Click Estratégico - Marketing Digital y Tradicional en Santa Cruz</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; background: #f5f7fa; }
+    header { 
+      background: linear-gradient(135deg, #003087, #0051c7); 
+      color: white; 
+      text-align: center; 
+      padding: 5em 1em; 
+      position: relative; 
+      overflow: hidden; 
+    }
+    header::before { 
+      content: ''; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f') no-repeat center/cover; 
+      opacity: 0.3; 
+      z-index: 0; 
+    }
+    header h1 { 
+      font-size: 3.5em; 
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+      animation: slideInDown 1s ease-out; 
+      position: relative; 
+      z-index: 1; 
+    }
+    header p { 
+      font-size: 1.2em; 
+      max-width: 600px; 
+      margin: 1em auto; 
+      animation: fadeIn 1.5s ease-in; 
+      position: relative; 
+      z-index: 1; 
+    }
+    nav { 
+      background: #F28C38; 
+      padding: 1em; 
+      text-align: center; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    }
+    nav a { 
+      color: white; 
+      margin: 0 1.5em; 
+      text-decoration: none; 
+      font-weight: 500; 
+      font-size: 1.1em; 
+      transition: color 0.3s, transform 0.3s; 
+    }
+    nav a:hover { 
+      color: #003087; 
+      transform: scale(1.1); 
+    }
+    section { 
+      padding: 4em 1em; 
+      max-width: 1200px; 
+      margin: auto; 
+    }
+    h2 { 
+      color: #003087; 
+      font-size: 2.5em; 
+      margin-bottom: 0.5em; 
+      text-align: center; 
+      position: relative; 
+    }
+    h2::after { 
+      content: ''; 
+      width: 60px; 
+      height: 4px; 
+      background: #F28C38; 
+      position: absolute; 
+      bottom: -10px; 
+      left: 50%; 
+      transform: translateX(-50%); 
+    }
+    h3 { 
+      color: #F28C38; 
+      font-size: 1.8em; 
+      margin-bottom: 0.5em; 
+    }
+    .btn { 
+      background: #F28C38; 
+      color: white; 
+      padding: 0.8em 2em; 
+      text-decoration: none; 
+      border-radius: 25px; 
+      display: inline-block; 
+      font-weight: 500; 
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s; 
+    }
+    .btn:hover { 
+      background: #d67a30; 
+      transform: translateY(-3px); 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    }
+    .card-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 2em; 
+      margin-top: 2em; 
+    }
+    .card { 
+      background: white; 
+      padding: 2em; 
+      border-radius: 15px; 
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1); 
+      transition: transform 0.3s, box-shadow 0.3s; 
+      animation: fadeInUp 1s ease-out; 
+    }
+    .card:hover { 
+      transform: translateY(-10px); 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+    }
+    .img-container { 
+      text-align: center; 
+      margin: 2em 0; 
+    }
+    .img-container img { 
+      max-width: 100%; 
+      border-radius: 15px; 
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1); 
+      transition: transform 0.3s, filter 0.3s; 
+    }
+    .img-container img:hover { 
+      transform: scale(1.05); 
+      filter: brightness(1.1); 
+    }
+    .objetivos ul, .comunicacion ul { 
+      list-style: none; 
+      padding: 0; 
+    }
+    .objetivos li, .comunicacion li { 
+      background: #e6f0ff; 
+      margin: 1em 0; 
+      padding: 1.5em; 
+      border-radius: 10px; 
+      transition: background 0.3s; 
+    }
+    .objetivos li:hover, .comunicacion li:hover { 
+      background: #d1e0ff; 
+    }
+    .mensaje, .posicionamiento { 
+      background: #003087; 
+      color: white; 
+      padding: 2em; 
+      border-radius: 15px; 
+      text-align: center; 
+      margin: 2em 0; 
+      animation: fadeIn 1s ease-in; 
+    }
+    .social-links { 
+      margin-top: 1em; 
+    }
+    .social-links a { 
+      margin: 0 1em; 
+      color: #F28C38; 
+      font-size: 1.5em; 
+      transition: color 0.3s; 
+    }
+    .social-links a:hover { 
+      color: #003087; 
+    }
+    footer { 
+      background: #003087; 
+      color: white; 
+      text-align: center; 
+      padding: 2em; 
+      position: relative; 
+    }
+    footer p { 
+      margin: 0.5em 0; 
+    }
+    @keyframes fadeIn { 
+      from { opacity: 0; } 
+      to { opacity: 1; } 
+    }
+    @keyframes fadeInUp { 
+      from { opacity: 0; transform: translateY(20px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    @keyframes slideInDown { 
+      from { opacity: 0; transform: translateY(-50px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5em; }
+      nav a { margin: 0 0.5em; font-size: 1em; }
+      .card-grid { grid-template-columns: 1fr; }
+      section { padding: 2em 1em; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Click Estratégico</h1>
+    <p>Tu aliado en marketing digital y tradicional en Santa Cruz de la Sierra. Estrategias ágiles con resultados garantizados.</p>
+    <a href="https://wa.me/59112345678" class="btn" target="_blank">Contáctanos por WhatsApp</a>
+  </header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#antecedentes">Antecedentes</a>
+    <a href="#objetivos">Objetivos</a>
+    <a href="#foda">FODA</a>
+    <a href="#segmentacion">Segmentación</a>
+    <a href="#campanas">Campañas</a>
+    <a href="#comunicacion">Comunicación</a>
+    <a href="#posicionamiento">Posicionamiento</a>
+    <a href="https://wa.me/59112345678" target="_blank">Contacto</a>
+  </nav>
+  <section id="inicio">
+    <h2>Transforma tu Negocio con Click Estratégico</h2>
+    <p>En Click Estratégico, potenciamos pymes y startups en Santa Cruz de la Sierra con estrategias de marketing digital y tradicional entregadas en solo <strong>7 días hábiles</strong>. Garantizamos un <strong>ROI mínimo del 200%</strong>, ofreciendo soluciones personalizadas, auditorías gratuitas y soporte continuo para maximizar tu presencia online y offline.</p>
+    <div class="img-container">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Estrategias de marketing digital en Santa Cruz" loading="lazy">
+    </div>
+    <a href="https://www.facebook.com/clickestrategico" class="btn" target="_blank">Síguenos en Facebook</a>
+  </section>
+  <section id="antecedentes">
+    <h2>Nuestra Historia</h2>
+    <p>Click Estratégico es una agencia de marketing innovadora en Santa Cruz de la Sierra, dedicada a ofrecer soluciones rápidas, accesibles y efectivas. Nos especializamos en fortalecer la presencia de empresas tanto en el entorno digital como tradicional, maximizando resultados comerciales con un enfoque en inmediatez, atención personalizada y métricas claras.</p>
+    <div class="img-container">
+      <img src="https://images.unsplash.com/photo-1552664688-cf412ec27db2" alt="Agencia de marketing en Bolivia" loading="lazy">
+    </div>
+    <a href="https://www.instagram.com/clickestrategico" class="btn" target="_blank">Explora nuestro Instagram</a>
+  </section>
+  <section id="objetivos">
+    <h2>Nuestros Objetivos</h2>
+    <div class="objetivos">
+      <ul>
+        <li><strong>General:</strong> Convertirnos en la agencia de marketing más rápida, efectiva y confiable de Santa Cruz de la Sierra.</li>
+        <li><strong>Específicos:</strong>
+          <ul>
+            <li>Aumentar nuestra base de clientes en un 30% en el primer año con estrategias segmentadas y alianzas estratégicas.</li>
+            <li>Incrementar la visibilidad de marca en redes sociales, medios impresos y espacios públicos.</li>
+            <li>Asegurar un ROI mínimo del 200% en todas las campañas gestionadas.</li>
+            <li>Fidelizar al 70% de nuestros clientes con planes personalizados y soporte excepcional.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="img-container">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Equipo de marketing estratégico" loading="lazy">
+    </div>
+    <a href="https://www.linkedin.com/company/clickestrategico" class="btn" target="_blank">Conecta en LinkedIn</a>
+  </section>
+  <section id="foda">
+    <h2>Análisis FODA</h2>
+    <p>Nos destacamos en el competitivo mercado de Santa Cruz con estrategias personalizadas entregadas en 7 días. Como agencia emergente, combinamos rapidez, excelencia y accesibilidad para apoyar a pymes y startups, enfrentando desafíos y capitalizando oportunidades.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Fortalezas</h3>
+        <ul>
+          <li>Estrategias entregadas en 7 días hábiles.</li>
+          <li>Atención rápida y seguimiento constante.</li>
+          <li>Equipo capacitado en tendencias actuales.</li>
+          <li>Planes accesibles para negocios emergentes.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Debilidades</h3>
+        <ul>
+          <li>Marca nueva: construimos confianza con testimonios.</li>
+          <li>Recursos iniciales limitados: usamos estrategias orgánicas.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Oportunidades</h3>
+        <ul>
+          <li>Crecimiento digital en Bolivia: ofrecemos contenido educativo.</li>
+          <li>Alta demanda en Santa Cruz: participamos en eventos.</li>
+          <li>Alianzas con startups para expansión.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Amenazas</h3>
+        <ul>
+          <li>Competencia: destacamos por velocidad y tarifas.</li>
+          <li>Cambios en algoritmos: capacitación continua.</li>
+          <li>Escepticismo: mostramos resultados inmediatos.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="img-container">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Análisis FODA de marketing" loading="lazy">
+    </div>
+    <a href="https://wa.me/59112345678" class="btn" target="_blank">Consulta por WhatsApp</a>
+  </section>
+  <section id="segmentacion">
+    <h2>Segmentación de Mercado</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Geográfico</h3>
+        <p>Empresas en Santa Cruz de la Sierra y áreas cercanas con acceso a canales digitales y tradicionales.</p>
+      </div>
+      <div class="card">
+        <h3>Demográfico</h3>
+        <p>Pymes y startups en sectores como comercio, servicios y manufactura.</p>
+      </div>
+      <div class="card">
+        <h3>Psicográfico</h3>
+        <p>Negocios enfocados en crecimiento, innovación y optimización de su presencia.</p>
+      </div>
+      <div class="card">
+        <h3>Conductual</h3>
+        <p>Clientes que priorizan soluciones rápidas, medibles y personalizadas.</p>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 2em;"><strong>Público Objetivo:</strong> Emprendedores de 25-55 años liderando pymes, comprometidos con modernizar sus estrategias comerciales.</p>
+    <div class="img-container">
+      <img src="https://images.unsplash.com/photo-1557426272-fc91fdb8f453" alt="Emprendedores en Santa Cruz" loading="lazy">
+    </div>
+    <a href="https://www.facebook.com/clickestrategico" class="btn" target="_blank">Visítanos en Facebook</a>
+  </section>
+  <section id="campanas">
+    <h2>Nuestras Campañas</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Campaña Navideña (1-24 Dic)</h3>
+        <p><strong>Objetivo:</strong> Potenciar ventas y posicionamiento durante la temporada festiva.</p>
+        <p><strong>Estrategia:</strong> Contenido emotivo y promociones navideñas.</p>
+        <ul>
+          <li>Videos promocionales para redes sociales.</li>
+          <li>Flyers y publicidad impresa con ofertas.</li>
+          <li>Descuentos en paquetes de branding.</li>
+          <li>Sorteos para aumentar interacción.</li>
+        </ul>
+        <div class="img-container">
+          <img src="https://images.unsplash.com/photo-1543581658-7d662d7a0679" alt="Campaña navideña en Bolivia" loading="lazy">
+        </div>
+      </div>
+      <div class="card">
+        <h3>6 de Agosto (30 Jul-7 Ago)</h3>
+        <p><strong>Objetivo:</strong> Reforzar la identidad de marca con orgullo patrio.</p>
+        <p><strong>Estrategia:</strong> Contenido que celebra la identidad boliviana.</p>
+        <ul>
+          <li>Videos y gráficos patrióticos.</li>
+          <li>Anuncios en radio, afiches y pasacalles.</li>
+          <li>Descuentos en paquetes locales.</li>
+        </ul>
+        <div class="img-container">
+          <img src="https://images.unsplash.com/photo-1599420186946-0b5a9dd6d0e7" alt="Campaña del 6 de Agosto" loading="lazy">
+        </div>
+      </div>
+      <div class="card">
+        <h3>FEXPOCRUZ</h3>
+        <p><strong>Objetivo:</strong> Maximizar la visibilidad en la feria más importante.</p>
+        <p><strong>Estrategia:</strong> Paquetes integrales para stands y promoción.</p>
+        <ul>
+          <li>Contenido para stands y redes sociales.</li>
+          <li>Remarketing para atraer visitantes.</li>
+        </ul>
+        <div class="img-container">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" alt="Feria FEXPOCRUZ" loading="lazy">
+        </div>
+      </div>
+      <div the="card">
+        <h3>Black Friday (15-30 Nov)</h3>
+        <p><strong>Objetivo:</strong> Impulsar ventas masivas con ofertas irresistibles.</p>
+        <p><strong>Estrategia:</strong> Campañas express en medios digitales y tradicionales.</p>
+        <ul>
+          <li>Anuncios en Facebook, Instagram y medios locales.</li>
+          <li>Landing pages para promociones específicas.</li>
+        </ul>
+        <div class="img-container">
+          <img src="https://images.unsplash.com/photo-1576179635662-9d19844e4121" alt="Campaña Black Friday" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <a href="https://www.instagram.com/clickestrategico" class="btn" target="_blank">Ver más en Instagram</a>
+  </section>
+  <section id="comunicacion">
+    <h2>Objetivos de Comunicación</h2>
+    <div class="comunicacion">
+      <ul>
+        <li><strong>Informar:</strong> Promover los servicios de Click Estratégico, destacando rapidez, efectividad y resultados en medios digitales y tradicionales.</li>
+        <li><strong>Persuadir:</strong> Atraer clientes con testimonios, casos de éxito y auditorías gratuitas.</li>
+        <li><strong>Conectar:</strong> Mantener presencia con contenido creativo e interactivo en todos los canales.</li>
+      </ul>
+    </div>
+    <div class="mensaje">
+      <h3>Nuestro Mensaje</h3>
+      <p>"Resultados efectivos en tiempo récord. En Click Estratégico, te impulsamos al éxito con estrategias de marketing digitales y tradicionales, ágiles, accesibles y personalizadas. Desde auditorías gratuitas hasta soluciones creativas, hacemos crecer tu marca sin retrasos. Click Estratégico: tu aliado comercial en Santa Cruz."</p>
+    </div>
+    <div class="img-container">
+      <img src="https://images.unsplash.com/photo-1661956602116-aa6865609028" alt="Comunicación estratégica de marketing" loading="lazy">
+    </div>
+    <a href="https://www.linkedin.com/company/clickestrategico" class="btn" target="_blank">Conecta en LinkedIn</a>
+  </section>
+  <section id="posicionamiento">
+    <h2>Posicionamiento</h2>
+    <div class="posicionamiento">
+      <h3>Nuestra Promesa</h3>
+      <ul>
+        <li><strong>Ventaja Competitiva:</strong> Estrategias digitales y tradicionales entregadas en 7 días, con planes accesibles y seguimiento proactivo.</li>
+        <li><strong>Estrategia de Posicionamiento:</strong> Agilidad, accesibilidad y efectividad, con atención personalizada y ROI garantizado.</li>
+        <li><strong>Declaración:</strong> Click Estratégico revoluciona el marketing en Santa Cruz de la Sierra con planes desde Bs 1500 al mes, estrategias en 7 días y un ROI mínimo del 200%. Somos tu impulso hacia el éxito online y offline.</li>
+      </ul>
+    </div>
+    <div class="img-container">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Posicionamiento de marca en Bolivia" loading="lazy">
+    </div>
+    <a href="https://wa.me/59112345678" class="btn" target="_blank">Habla con Nosotros</a>
+  </section>
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Planes desde <strong>Bs 1500/mes</strong>. Solicita tu <strong>auditoría gratuita</strong> y descubre cómo potenciamos tu negocio con estrategias personalizadas.</p>
+    <a href="https://wa.me/59112345678" class="btn" target="_blank">Chatea por WhatsApp</a>
+    <div class="social-links">
+      <a href="https://www.facebook.com/clickestrategico" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/clickestrategico" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/company/clickestrategico" target="_blank">LinkedIn</a>
+    </div>
+    <div class="img-container">
+      <img src="https://images.unsplash.com/photo-1577563900805-1d8cb3a80b0f" alt="Contacto empresarial" loading="lazy">
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 Click Estratégico. Santa Cruz de la Sierra, Bolivia. Todos los derechos reservados.</p>
+    <p>Tel: +591 77954678 | Email: <a href="https://wa.me/59177954678" style="color: #F28C38;">info@clickestrategico.com</a></p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/clickestrategico" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/clickestrategico" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/company/clickestrategico" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>
